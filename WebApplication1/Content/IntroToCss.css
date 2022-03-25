@@ -1,0 +1,45 @@
+﻿body {
+    color: orange;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: lightblue;
+}
+
+h1, h2 {
+    color: red;
+    font-size: 26px;
+}
+
+.special {
+    color: #800080;
+    font-size: xx-large;
+}
+
+h1 .special {
+    color: red;
+    font-size: 16px;
+}
+
+h1, h2 .special {
+    color: black;
+    font-size: 16px;
+}
+
+#mainArticle {
+    color: red;
+}
+
+p .special {
+    color: blue;
+    font-size: 50px;
+}
+
+p.special {
+    color: purple;
+    font-size: 45px;
+}
+.introduction {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: #800000;
+}
