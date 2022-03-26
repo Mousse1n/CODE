@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class Problem
+    class Problem:Context
     {
 
         private string Title;

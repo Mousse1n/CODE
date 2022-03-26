@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test5
+namespace TestRoom
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Suggest sg = new Suggest();
-            //不能调用Id
-        
         }
     }
 }

@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test5
+namespace TableAnimal
 {
-    class Program
+    class MoveThing
     {
-        static void Main(string[] args)
+
+        public void Run()
         {
-            Suggest sg = new Suggest();
-            //不能调用Id
-        
+
+
         }
+
+
     }
 }

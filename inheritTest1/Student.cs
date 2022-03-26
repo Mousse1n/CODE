@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace inheritTest1
 {
-    class Student:Person
+  class Student:Person
   {
-    //    public Student() : base("") 
-    //    {
+        //    public Student() : base("") 
+        //    {
+
+        //    }
+        //internal int score { get; set; }
+        public Student()
+        {
         
-    //    }
-        internal int score { get; set; }
+        
+        }
         public Student(int age,string name) :base(age)
         {
         
@@ -21,6 +26,17 @@ namespace inheritTest1
         public Student(int age):base(age) 
         {
         
+        }
+        public double score { get; set; }
+        public void Exam() 
+        {
+            eat();
+            this.eat();
+            base.eat();
+            if (Age>18)
+            {
+
+            };
         }
     }  
 }

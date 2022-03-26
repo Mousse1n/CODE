@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8053A091-73D5-4016-BE80-D82BBD96614A}</ProjectGuid>
+    <ProjectGuid>{B2B6DA58-C3B5-4AC5-8C1B-67D74E6F4A1D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Test5</RootNamespace>
-    <AssemblyName>Test5</AssemblyName>
+    <RootNamespace>TableAnimal</RootNamespace>
+    <AssemblyName>TableAnimal</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,19 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Article.cs" />
-    <Compile Include="ContentService.cs" />
-    <Compile Include="Context.cs" />
-    <Compile Include="Entity.cs" />
-    <Compile Include="FactoryContext.cs" />
-    <Compile Include="HelpMoney.cs" />
-    <Compile Include="MimicStack.cs" />
-    <Compile Include="Problem.cs" />
+    <Compile Include="Animal.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="LegThing.cs" />
+    <Compile Include="MoveThing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repoistory.cs" />
-    <Compile Include="Suggest.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Table.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

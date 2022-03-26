@@ -9,6 +9,12 @@ namespace inheritTest1
     class Person
     {
         public int Age { get; set; }
+        public Person()
+        {
+        
+        
+
+        }
         public Person(string name) 
         {
             Name = name;

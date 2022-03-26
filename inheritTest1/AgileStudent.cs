@@ -11,7 +11,8 @@ namespace inheritTest1
 
         public AgileStudent(int id,string name,int age):base(age,name) 
         {
-        
+                
+
         
         }
 
