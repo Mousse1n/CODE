@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class Entity
+    public  class Entity
     {
 
         public readonly int Id ;

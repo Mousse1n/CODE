@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRoom", "..\TestRoom\Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableAnimal", "..\TableAnimal\TableAnimal.csproj", "{B2B6DA58-C3B5-4AC5-8C1B-67D74E6F4A1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualAndOverride", "..\VirtualAndOverride\VirtualAndOverride.csproj", "{2439AA01-9905-47E5-A1C5-D676B8303DA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{B2B6DA58-C3B5-4AC5-8C1B-67D74E6F4A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2B6DA58-C3B5-4AC5-8C1B-67D74E6F4A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2B6DA58-C3B5-4AC5-8C1B-67D74E6F4A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2439AA01-9905-47E5-A1C5-D676B8303DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2439AA01-9905-47E5-A1C5-D676B8303DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2439AA01-9905-47E5-A1C5-D676B8303DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2439AA01-9905-47E5-A1C5-D676B8303DA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

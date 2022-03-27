@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test5
+namespace VirtualAndOverride
 {
-    class Suggest :ContentService
+    class OnlineStudent: Student 
     {
 
-        public override void publish()
+        public override void eat()
         {
-            base.publish();
+            base.eat();/*多重的Override*/
         }
 
     }

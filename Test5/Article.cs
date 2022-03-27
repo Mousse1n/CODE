@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class Article :Context
+    class Article :ContentService
     {
+        HelpMoney hpm = new HelpMoney();
+
+        public override void publish()
+        {
+            hpm.changes--;
+            base.publish();
+        }
+
     }
 }

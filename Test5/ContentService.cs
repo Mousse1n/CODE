@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class ContentService
+
+     class  ContentService
     {
+
+        public virtual void   publish()
+        {
+
+            Console.WriteLine("已经推送且扣除相应帮帮币");
+
+        }
+
     }
 }

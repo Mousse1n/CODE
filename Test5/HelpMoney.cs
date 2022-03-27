@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class HelpMoney :Entity
+   public  class HelpMoney :Entity
     {
         private DateTime UserPayTime;
         private int available;
         private int frozen;
         private int type;
 
-        private int changes;
+        public  int changes;
         private string remarks;
 
         public void AddHelpMoney() 

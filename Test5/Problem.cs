@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class Problem:Context
+    class Problem:ContentService
     {
 
         private string Title;
         private string Body;
         private int Reward;
         private User Author;
-        public void publish() 
+        HelpMoney hpm = new HelpMoney();
+        public override void publish()
         {
-        
-        
+            hpm.changes -= Reward;
+            base.publish();
         }
         public void Load(int id)
         {
