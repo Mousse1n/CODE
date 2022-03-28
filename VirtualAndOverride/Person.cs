@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VirtualAndOverride
 {
-    class Person
+   /*abstract*/ class Person
     {
         public String Name;
     public /*static*/ virtual/*虚拟的*/ void eat() 
