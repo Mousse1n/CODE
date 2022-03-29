@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class Context
+   //抽象类：因为里面有字段并且有些方法需要具体的方法实现。
+    abstract class Content
     {
 
         protected string _kind ;

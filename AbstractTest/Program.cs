@@ -13,6 +13,7 @@ namespace AbstractTest
         //private都行了吗哈哈哈哈啊哈哈哈
         //不能为private
         //以前是不能有访问修饰符
+        void Practise();
     
     }
 
@@ -20,6 +21,7 @@ namespace AbstractTest
     {
         //public double Score { get; set; }
         void GoLesson();
+        void Practise();
     
     }
     public abstract  class Person
@@ -32,7 +34,8 @@ namespace AbstractTest
         {
               
         }
-
+       // public static void Test() { } 
+        
         public int Age { get;set;}
         public string Name { get; set; }
         //public virtual void eat() 
@@ -86,6 +89,16 @@ namespace AbstractTest
         }
 
         void IMove.go()
+        {
+            throw new NotImplementedException();
+        }
+
+        void Ilearn.Practise()//显式实现用于区分
+        {
+            throw new NotImplementedException();
+        }
+
+        void IPlay.Practise()
         {
             throw new NotImplementedException();
         }
