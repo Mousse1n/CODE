@@ -8,7 +8,18 @@ namespace Test5
 {
     class Problem:ContentService
     {
+        public string[] _KeyNumber = { "sql", "C#", "Javscript" };
+        public string this[int index]
+        {
 
+            get { return _KeyNumber[index]; }
+            set { _KeyNumber[index] = value; }
+
+        
+        }
+
+
+        
         private string Title;
         private string Body;
         private int Reward;

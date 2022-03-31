@@ -14,8 +14,38 @@ namespace Test5
 //        Login()：能输出当前用户的登录信息，比如：fg开始登录，输入密码：1234
 //求助版块，定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）和作者
         private string Name;
+        internal void setName(string name)
+        {
+            if(name == null)
+            {
+                Console.WriteLine("name为空");
+                return;
+            }
+            Name = name;
+        }
+        internal string getName() 
+        {
+
+            return Name;
+
+        
+        }
         private string PassWord;
         private User InvitedBy;
+        public User(string UserName,string Password) 
+        {
+            if (UserName == null||Password==null)
+            {
+                Console.WriteLine("不能为空");
+            }
+        
+        }
+        public User() 
+        {
+        
+        
+        
+        }
         public User Register(string Name,string PassWord,string InvitedBy) 
         {
             User user = new User();
