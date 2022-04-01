@@ -50,6 +50,8 @@ namespace StructTest
 
         static void Main(string[] args)
         {
+
+            //string name = ReadOnlySpan<char>();
             Console.WriteLine(new Student {age = 18 }>new Student{age=17 });
             double gep = new Student { Score = 98.5 } - new Student {Score = 98.0 };
             Console.WriteLine(DateTime.Now.ToLongDateString());
@@ -57,11 +59,12 @@ namespace StructTest
             Console.WriteLine(DateTime.Now.ToShortDateString());
             Console.WriteLine(DateTime.Now.ToShortTimeString());
             Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH小时mm分 "));
-
-
-
-
-
+            TimeSpan spa = new TimeSpan(TimeSpan.TicksPerMinute);
+            TimeSpan span = new TimeSpan(0,1,0);
+            //Student lw = (Student)new Person();
+            Teacher th = new Teacher();
+            Student st = (Student)new Teacher();
+            Teacher fg = new Student();
             //string now = "2010/2/22";
 
             //if (DateTime.TryParse(now, out DateTime result))
@@ -81,7 +84,7 @@ namespace StructTest
             // Console.WriteLine(DateTime.Now);
             ///*int*/Int32 age = new Int32();//int 是int32的简写
             /*long aa = new Int64()*/
-            ;
+
             //if (age is Int32)
             //{
 
@@ -97,8 +100,23 @@ namespace StructTest
             // dream._number = 32;//只有字段可以，方法属性是不行的
         }
     }
+
+    internal class Teacher:Person
+    {
+        public Teacher()
+        {
+        }
+        public static implicit operator Teacher(Student student) 
+        {
+
+            return new Teacher();
+            
+        }
+    }
+
     internal class Person
     {
+        public string Name { get; set; }
         public int age { get; set; }
         public Person()
         {
@@ -108,8 +126,25 @@ namespace StructTest
     }
     internal class Student : Person
     {
+        
         public double Score { get;  set; }
+        public static /*implicit*/explicit operator Student(Teacher teacher)
+        {
+            //implicit 隐式转化
+            //explicit 显式转换
 
+            return new Student
+            {
+
+                age = teacher.age,
+                Name = teacher.Name
+            };
+        
+        }
+        
+        
+        
+        
         public static Double operator -(Student a,Student b)
         {
             
@@ -128,12 +163,11 @@ namespace StructTest
             return a.age < b.age;
 
         }
-        public Student()
-        {
-
-
-
-
+            
+        
         }
+
+       
     }
-}
+        
+
