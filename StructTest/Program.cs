@@ -98,6 +98,7 @@ namespace StructTest
             // Bed dream /*= new Bed()*/;
             // //dream.HasBooked = false;
             // dream._number = 32;//只有字段可以，方法属性是不行的
+            //Student student = new Student(int i = 5);
         }
     }
 

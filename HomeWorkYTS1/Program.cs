@@ -113,10 +113,11 @@ namespace HomeWorkYTS1
         }
         static void Main(string[] args)
         {
+           
             //double[] Exam = { 99.00, 88.00, 77.00, 11.00, 100.00, 22.00 };
             //double Avg = Math.Round(GetAverage(Exam), 2);
             //Console.WriteLine(Avg);
-            GuessMe();
+           // GuessMe();
                 
 
             //Random rand = new Random();//调用随机数
@@ -220,7 +221,7 @@ namespace HomeWorkYTS1
             //}
 
             //GetArray();
-            Swap(1, 2);
+            //Swap(1, 2);
             ReadLine();
 
 
@@ -337,6 +338,7 @@ namespace HomeWorkYTS1
             double girth = 2 * 3.14 * radius;//周长计算逻辑
             return girth;
         }
+        
     }
 
 }
