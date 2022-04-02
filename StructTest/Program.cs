@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StructTest
 {
@@ -29,7 +25,7 @@ namespace StructTest
 
     class Program
     {
-
+        //用代码证明struct定义的类型是值类型
 
 
 
@@ -46,21 +42,41 @@ namespace StructTest
         //    return null;
         //} 
 
+        public struct Truth
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public string Address { get; set; }
 
+        }
 
         static void Main(string[] args)
         {
+            Truth truth = new Truth();
+            //truth.Name = "张三";
+            //truth.Address = "adadadadadadadadada";
+            //truth.Age = 18;
+            //Console.WriteLine($"Name={truth.Name},Age={truth.Age},Address={truth.Address}");
 
+            if (truth is System.ValueTuple)
+            {
+                Console.WriteLine("结构是值类型");
+            }
+            else
+            {
+                Console.WriteLine("结构是应用类型");
+            }
+            
             //string name = ReadOnlySpan<char>();
-            Console.WriteLine(new Student {age = 18 }>new Student{age=17 });
-            double gep = new Student { Score = 98.5 } - new Student {Score = 98.0 };
+            Console.WriteLine(new Student { age = 18 } > new Student { age = 17 });
+            double gep = new Student { Score = 98.5 } - new Student { Score = 98.0 };
             Console.WriteLine(DateTime.Now.ToLongDateString());
             Console.WriteLine(DateTime.Now.ToLongTimeString());
             Console.WriteLine(DateTime.Now.ToShortDateString());
             Console.WriteLine(DateTime.Now.ToShortTimeString());
             Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH小时mm分 "));
             TimeSpan spa = new TimeSpan(TimeSpan.TicksPerMinute);
-            TimeSpan span = new TimeSpan(0,1,0);
+            TimeSpan span = new TimeSpan(0, 1, 0);
             //Student lw = (Student)new Person();
             Teacher th = new Teacher();
             Student st = (Student)new Teacher();
@@ -99,19 +115,20 @@ namespace StructTest
             // //dream.HasBooked = false;
             // dream._number = 32;//只有字段可以，方法属性是不行的
             //Student student = new Student(int i = 5);
+            Console.ReadLine();
         }
     }
 
-    internal class Teacher:Person
+    internal class Teacher : Person
     {
         public Teacher()
         {
         }
-        public static implicit operator Teacher(Student student) 
+        public static implicit operator Teacher(Student student)
         {
 
             return new Teacher();
-            
+
         }
     }
 
@@ -121,14 +138,14 @@ namespace StructTest
         public int age { get; set; }
         public Person()
         {
-            
+
         }
 
     }
     internal class Student : Person
     {
-        
-        public double Score { get;  set; }
+
+        public double Score { get; set; }
         public static /*implicit*/explicit operator Student(Teacher teacher)
         {
             //implicit 隐式转化
@@ -140,19 +157,19 @@ namespace StructTest
                 age = teacher.age,
                 Name = teacher.Name
             };
-        
+
         }
-        
-        
-        
-        
-        public static Double operator -(Student a,Student b)
+
+
+
+
+        public static Double operator -(Student a, Student b)
         {
-            
+
             return a.Score - b.Score;
 
         }
-        public static bool operator >(Student a,Student b)
+        public static bool operator >(Student a, Student b)
         {
             return a.age > b.age;
 
@@ -164,11 +181,11 @@ namespace StructTest
             return a.age < b.age;
 
         }
-            
-        
-        }
 
-       
+
     }
-        
+
+
+}
+
 
