@@ -26,7 +26,7 @@ namespace StructHomework
                 {
                     DateTime OneWeakDateTime = Dt.AddDays(UserNumber);
                     return OneWeakDateTime.ToLongDateString();
-
+                    //
                 }
                 if (30 > UserNumber && UserNumber > 7)
                 {
