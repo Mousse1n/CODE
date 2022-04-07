@@ -13,6 +13,7 @@ namespace enumTest
         {
             //初始化的时候，初始值为0,枚举会去找0对应的参数
             Grade grade = Grade.Excellent;
+            
             Console.WriteLine((int)grade);
             Console.WriteLine(DateTime.Now.DayOfWeek);
             Grade got = (Grade)10;//不报错

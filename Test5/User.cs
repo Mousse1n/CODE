@@ -14,6 +14,7 @@ namespace Test5
 //        Login()：能输出当前用户的登录信息，比如：fg开始登录，输入密码：1234
 //求助版块，定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）和作者
         private string Name;
+        public  Token TokenManager { get; set; }
         internal void setName(string name)
         {
             if(name == null)

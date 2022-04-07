@@ -52,35 +52,35 @@ namespace StructTest
 
         static void Main(string[] args)
         {
-            Truth truth = new Truth();
-            //truth.Name = "张三";
-            //truth.Address = "adadadadadadadadada";
-            //truth.Age = 18;
-            //Console.WriteLine($"Name={truth.Name},Age={truth.Age},Address={truth.Address}");
+            //Truth truth = new Truth();
+            ////truth.Name = "张三";
+            ////truth.Address = "adadadadadadadadada";
+            ////truth.Age = 18;
+            ////Console.WriteLine($"Name={truth.Name},Age={truth.Age},Address={truth.Address}");
 
-            if (truth is System.ValueTuple)
-            {
-                Console.WriteLine("结构是值类型");
-            }
-            else
-            {
-                Console.WriteLine("结构是应用类型");
-            }
+            //if (truth is System.ValueTuple)
+            //{
+            //    Console.WriteLine("结构是值类型");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("结构是应用类型");
+            //}
             
             //string name = ReadOnlySpan<char>();
-            Console.WriteLine(new Student { age = 18 } > new Student { age = 17 });
-            double gep = new Student { Score = 98.5 } - new Student { Score = 98.0 };
-            Console.WriteLine(DateTime.Now.ToLongDateString());
-            Console.WriteLine(DateTime.Now.ToLongTimeString());
-            Console.WriteLine(DateTime.Now.ToShortDateString());
-            Console.WriteLine(DateTime.Now.ToShortTimeString());
-            Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH小时mm分 "));
-            TimeSpan spa = new TimeSpan(TimeSpan.TicksPerMinute);
-            TimeSpan span = new TimeSpan(0, 1, 0);
-            //Student lw = (Student)new Person();
-            Teacher th = new Teacher();
-            Student st = (Student)new Teacher();
-            Teacher fg = new Student();
+            //Console.WriteLine(new Student { age = 18 } > new Student { age = 17 });
+            //double gep = new Student { Score = 98.5 } - new Student { Score = 98.0 };
+            //Console.WriteLine(DateTime.Now.ToLongDateString());
+            //Console.WriteLine(DateTime.Now.ToLongTimeString());
+            //Console.WriteLine(DateTime.Now.ToShortDateString());
+            //Console.WriteLine(DateTime.Now.ToShortTimeString());
+            //Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH小时mm分 "));
+            //TimeSpan spa = new TimeSpan(TimeSpan.TicksPerMinute);
+            //TimeSpan span = new TimeSpan(0, 1, 0);
+            ////Student lw = (Student)new Person();
+            //Teacher th = new Teacher();
+            //Student st = (Student)new Teacher();
+            //Teacher fg = new Student();
             //string now = "2010/2/22";
 
             //if (DateTime.TryParse(now, out DateTime result))
@@ -115,6 +115,25 @@ namespace StructTest
             // //dream.HasBooked = false;
             // dream._number = 32;//只有字段可以，方法属性是不行的
             //Student student = new Student(int i = 5);
+            //int j = 0;
+            //string str = "sb";
+            int n = int.Parse(Console.ReadLine()); ;
+            int sum =  0;
+            for (int i = 1; i <= n; i++)//1,2,3.....,99
+            {
+                //sum += i;
+                //1+1 = 2
+                //1+2  =3 
+                //第三次循环，i = 3, sum1 = 3,sum 2 = 6，1+2+3
+                //第四次循环，i = 4，sum1 - 6，sum2 = 10,1+2+3+4
+                //1+2+3+4+5,i = 5,sum = 10,sum 2 = 15;
+                sum=sum + i ;
+                sum += i;//== ++ i++ ++i
+                    
+            }
+            Console.WriteLine(sum);
+           
+          
             Console.ReadLine();
         }
     }
