@@ -8,7 +8,7 @@ namespace Test5
 {
     public class TokenManager
     {
-        private Token _token { get; set; }
+        private Token _token { get; set; }//
 
         /// <summary>
         /// 添加权限

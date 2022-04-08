@@ -39,6 +39,9 @@ namespace SwithCaseTest
 
         static void Main(string[] args)
         {
+            DayOfWeek.Friday.GetType();//所有类都继承自Object类(默认继承子object类)
+            Console.WriteLine(Equals(new Student(),new Student()));
+            Console.WriteLine(Equals(new Role(),new Role()));
             Console.WriteLine(1 | 0);
             Console.WriteLine(1 & 0);
             Console.WriteLine(2 & 3);
