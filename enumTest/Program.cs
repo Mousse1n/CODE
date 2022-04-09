@@ -16,7 +16,7 @@ namespace enumTest
             
             Console.WriteLine((int)grade);
             Console.WriteLine(DateTime.Now.DayOfWeek);
-            Grade got = (Grade)10;//不报错
+            //Grade got = (Grade)10;//不报错
             //Console.WriteLine();
             Console.WriteLine((short)Grade.Passed);
             Console.ReadLine();

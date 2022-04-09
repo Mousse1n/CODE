@@ -10,9 +10,9 @@ namespace Test5
     abstract class Content
     {
 
-        protected string _kind ;
+        protected string _kind  ;
         private DateTime createTime;
-        public  DateTime PublishTime 
+        public   DateTime PublishTime 
         {
 
             get { return createTime; }
