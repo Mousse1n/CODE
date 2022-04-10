@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    class Article :ContentService
+     public class Article :ContentService
     {
         HelpMoney hpm = new HelpMoney();
 

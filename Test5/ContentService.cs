@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Test5
 {
 
-     class  ContentService
+    public  class  ContentService
     {
-
+        public int id { get; set; }
         public virtual void   publish()
         {
 

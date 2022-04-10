@@ -14,7 +14,12 @@ namespace Test5
             //不能调用Id
             //加载
             //aaaa
-        
+            Article article = new Article();
+            article.publish();
+            int a = article.id;
+            Suggest suggest = new Suggest();
+            suggest.publish();
+            int b = suggest.id;
         }
     }
 }
