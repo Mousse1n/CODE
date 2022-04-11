@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAgreeOrDisagree.cs" />
     <Compile Include="Article.cs" />
     <Compile Include="ContentService.cs" />
     <Compile Include="Content.cs" />

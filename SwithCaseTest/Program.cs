@@ -122,6 +122,14 @@ namespace SwithCaseTest
             //lw.Roles = (Role)lw.Roles ^ Role.Beauty;//减法
             ////Role r = Role
             // Console.WriteLine(((Role)lw.Roles&Role.Beauty) == Role.Beauty);
+            //内置类型：值类型：数值（整数int/小数float）/bool
+            //引用类型中1：string/object/array
+            //万物皆对象
+            object wx = new object();
+            int i = 888;
+            object o = 986;//简单的装箱
+
+
         }
     }
 }
