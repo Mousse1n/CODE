@@ -17,7 +17,7 @@ namespace Test5
     {
         private int top = -1;//指向顶点元素
         private int maxSize;//数组最大存储空间
-        private int[] datas;//存储数据数组
+        private object[] datas;//存储数据数组
         private bool IsFull { get => top - 1 == maxSize - 1; }//是否装满
         public bool IsEmpty { get => top == maxSize - 1; }//是否为空
         /// <summary>
@@ -27,7 +27,7 @@ namespace Test5
         public MimicStack(int maxSize) 
         {
             this.maxSize = maxSize;
-            datas = new int[this.maxSize];
+            datas = new object[this.maxSize];
         }
         /// <summary>
         /// 判断是否满，并入栈；
@@ -54,7 +54,7 @@ namespace Test5
             {
                 throw new Exception("栈空");
             }
-            return datas[top--];
+            return (int)datas[top--];
         }
        /// <summary>
        /// 查看但是不弹出
@@ -67,7 +67,7 @@ namespace Test5
                 throw new Exception("栈空");
             }
             
-            return datas[top]; 
+            return (int)datas[top]; 
         
         }
         /// <summary>
@@ -80,7 +80,7 @@ namespace Test5
                 Console.WriteLine("栈空");
                 return;
             }
-            for (int i = top; i >= 0; i--)
+            for (int i = (int)top; i >= 0; i--)
             {
                 Console.WriteLine($"stack[{i}] = {datas[i]}");
             }
