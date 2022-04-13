@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enumTest", "..\enumTest\enu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwithCaseTest", "..\SwithCaseTest\SwithCaseTest.csproj", "{6770FC33-258F-4859-9773-1139B036D49E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringOrStringBuilder", "..\StringOrStringBuilder\StringOrStringBuilder.csproj", "{7493A9FD-83EB-426D-91CA-A031C7A1824C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{6770FC33-258F-4859-9773-1139B036D49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6770FC33-258F-4859-9773-1139B036D49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6770FC33-258F-4859-9773-1139B036D49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7493A9FD-83EB-426D-91CA-A031C7A1824C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7493A9FD-83EB-426D-91CA-A031C7A1824C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7493A9FD-83EB-426D-91CA-A031C7A1824C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7493A9FD-83EB-426D-91CA-A031C7A1824C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
