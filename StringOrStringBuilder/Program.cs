@@ -23,9 +23,42 @@ namespace StringOrStringBuilder
             age = age + 1;
 
         }
+        /// <summary>
+        /// 实现GetCount(string container, string target)方法，可以统计出container中有多少个target
+        /// </summary>
+        /// <param name="container">用户输入字符串</param>
+        /// <param name="target">寻找目标字符串</param>
+        /// <returns>查找到的个数</returns>
+        public static  int getCount(string container, string target)
+        {
+            int number = 0;
+            string[] Change = container.Split(" ");
+            for (int i = 0; i < Change.Length; i++)
+            {
+                if (Change[i].Contains(target))
+                {
+                    number++;
+                }
+                else
+                {
+                    Console.WriteLine($"第{i}位没有{target}");
+                }
+            }
+
+            return number;
+        }
 
 
-
+        public static string mimicJoin(string Joinsign,string stringone,string stringtwo,string stringthree) 
+        {
+            
+            StringBuilder sb = new StringBuilder();
+            sb.Append(stringone).Append(Joinsign).Append(stringtwo).Append(Joinsign).Append(stringthree);
+            string slagon = sb.ToString();
+            return slagon;
+        
+        }
+        
         static void Main(string[] args)
         {
             //string slagon = "@大神小班，拎包入住@";
@@ -52,6 +85,8 @@ namespace StringOrStringBuilder
             //string yezi = "yefei";
             //say(ref yezi);
             //Console.WriteLine(yezi);
+              
+            Console.WriteLine(mimicJoin("+", "1", "2", "3"));
             string a = "源栈";
             string b = "源栈";
             Console.WriteLine(a == b);//是因为有个字符串池技术，先去看字符串池中有没有这个字符串，有就直接将地址给变量，如果没有就新建对象给到字符串池中
@@ -85,7 +120,9 @@ namespace StringOrStringBuilder
             sb.Append("源栈");
             sb.Append(",");
             sb.Append("欢迎您!");
-            string slin = sb.ToString();
+            string slin = sb.ToString();//释放多余内存空间 
+
+
         }
     }
 }

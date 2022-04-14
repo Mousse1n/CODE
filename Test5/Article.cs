@@ -6,8 +6,39 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-     public class Article :ContentService
+    public class Article : ContentService
     {
+        private string _title;
+        public void setTitle(string title)
+        {
+            if (string.IsNullOrEmpty(title))
+            {
+                Console.WriteLine("标题不能为空");
+                return;
+
+            }
+
+            else if (string.IsNullOrWhiteSpace(title))
+            {
+                Console.WriteLine("标题里不能有空格！");
+                string Changetitle = title.Trim();
+                _title = Changetitle;
+            }
+            else
+            {
+                _title = title;  
+            }
+
+        }
+        public string getTitle()
+        {
+            return _title;
+
+
+        }
+
+
+
         HelpMoney hpm = new HelpMoney();
 
         public override void publish()

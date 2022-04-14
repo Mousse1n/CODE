@@ -26,8 +26,12 @@ namespace StructHomework
             /// <returns></returns>
             public string GetDate(string DayHear, int UserNumber)
             {
+                string UserReadline = DayHear.Replace("年",".");
 
-                DateTime Dt = DateTime.Parse(DayHear);
+                string UserReadline2 = UserReadline.Replace("月", ".");
+                string UserReadline3 = UserReadline2.Replace("日", ".");
+
+                DateTime Dt = DateTime.Parse(UserReadline3);
 
                 if (UserNumber < 7 && UserNumber > 0)
                 {

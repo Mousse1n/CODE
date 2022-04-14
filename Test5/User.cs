@@ -22,6 +22,10 @@ namespace Test5
                 Console.WriteLine("name为空");
                 return;
             }
+            if (name.Contains("admin")||name.Contains("17bang")|| name.Contains("管理员"))
+            {
+                Console.WriteLine("不能出现敏感词！");
+            }
             Name = name;
         }
         internal string getName() 
@@ -31,7 +35,19 @@ namespace Test5
 
         
         }
-        private string PassWord;
+        private string _passWord;
+        internal void setPassword(string pwd) 
+        {
+
+            if (pwd.Length <6||pwd.Contains("abcdefghijklmnopqrstuvwsyz")&&pwd.Contains("~!@#$%^&*()_+"))
+            {
+                Console.WriteLine("密码格式不正确，必须由大小写英语单词、数字和特殊符号（~!@#$%^&*()_+）组成");
+            }
+        
+        
+        }
+
+
         private User InvitedBy;
         public User(string UserName,string Password) 
         {
@@ -51,16 +67,16 @@ namespace Test5
         {
             User user = new User();
             user.Name = Name;
-            user.PassWord = PassWord;
+            user._passWord = PassWord;
             user.InvitedBy.Name = InvitedBy;
            
             return user;
         }
-        public User Login(string Name,string PassWord)
+        public User Login(string Name, string PassWord)
         {
             User user = new User();
             user.Name = Name;
-            user.PassWord = PassWord;
+            user._passWord = PassWord;
             return user;
         
         }
