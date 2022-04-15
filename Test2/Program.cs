@@ -27,7 +27,7 @@ namespace Test2
             //Student GZC = new Student("葛志超");
             //Student sj = new Student(12);
             //Student MJ = new Student();
-             //= new Student("aa",16);
+            //= new Student("aa",16);
 
             //int a = 18;
             //int b = a;
@@ -56,7 +56,9 @@ namespace Test2
             //csharp = grow(csharp);
             //WriteLine(csharp.age);
             //ReadLine();
-            
+            Console.WriteLine("请输入字符串");
+            string userin = Console.ReadLine();
+            Console.WriteLine($"你输入的字符串是:{userin}");
         }
     }
 }

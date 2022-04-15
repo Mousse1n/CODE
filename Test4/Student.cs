@@ -8,8 +8,19 @@ namespace Test4
 {
     class Student
     {
+        private int _weight;
+        public Student(int weight)
+        {
+
+            _weight = weight;
+
+        }
+
+
+
+
         internal const string BELONG = " ";
-       
+
         public Student()
         {
 
@@ -21,23 +32,23 @@ namespace Test4
             WriteLine($"你好啊{name}");
 
         }
-        public Student(string name,int age):this(name)
+        public Student(string name, int age) : this(name)
         {
 
             this.age = age;
 
         }
-        public Student(string name, int age, int score) : this(name,age)
+        public Student(string name, int age, int score) : this(name, age)
         {
             this.score = score;
         }
-        public Student(int  age)
-        {
-            this.age = age;
-            WriteLine($"你的年龄是{age}");
-        }
+        //public Student(int age)
+        //{
+        //    this.age = age;
+        //    WriteLine($"你的年龄是{age}");
+        //}
         private string name;
         private int age;
         private int score;
-    }  
+    }
 }

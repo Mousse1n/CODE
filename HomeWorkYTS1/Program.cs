@@ -113,12 +113,12 @@ namespace HomeWorkYTS1
         }
         static void Main(string[] args)
         {
-           
+
             //double[] Exam = { 99.00, 88.00, 77.00, 11.00, 100.00, 22.00 };
             //double Avg = Math.Round(GetAverage(Exam), 2);
             //Console.WriteLine(Avg);
-           // GuessMe();
-                
+            // GuessMe();
+
 
             //Random rand = new Random();//调用随机数
             //double radius = rand.Next(10);//固定随机数范围
@@ -222,7 +222,12 @@ namespace HomeWorkYTS1
 
             //GetArray();
             //Swap(1, 2);
+            object lw = new object();
+            int lw1 = 100;
             ReadLine();
+            //object lw = 100;
+            //object lw = new object();
+            //int lw1 = 100;
 
 
         }
