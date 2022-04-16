@@ -41,7 +41,7 @@ namespace StringOrStringBuilder
                 }
                 else
                 {
-                    Console.WriteLine($"第{i}位没有{target}");
+                     Console.WriteLine($"第{i}位没有{target}");
                 }
             }
 
