@@ -38,7 +38,7 @@ namespace StringOrStringBuilder
                 if (Change[i].Contains(target))
                 {
                     number++;
-                }
+                } 
                 else
                 {
                      Console.WriteLine($"第{i}位没有{target}");
