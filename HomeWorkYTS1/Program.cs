@@ -46,13 +46,15 @@ namespace HomeWorkYTS1
             string pwder = "111111";
             if (username == user && pwd == pwder)
             {
-                return true;
                 WriteLine("登录成功");
+                return true;
+                
             }
             else
             {
-                return false;
                 WriteLine("用户名密码错误");
+                return false;
+               
             }
 
         }
@@ -223,7 +225,7 @@ namespace HomeWorkYTS1
             //GetArray();
             //Swap(1, 2);
             object lw = new object();
-            int lw1 = 100;
+         //   int lw1 = 100;
             ReadLine();
             //object lw = 100;
             //object lw = new object();
@@ -258,7 +260,7 @@ namespace HomeWorkYTS1
             Random random1 = new Random();
             Random random2 = new Random();
             int min = /*random1.Next(1,100)*/1;
-            int gap = 5;
+           // int gap = 5;
             int length = /*random2.Next(10,1000)*/10;
 
             int[] ArrayNumber = new int[length];
