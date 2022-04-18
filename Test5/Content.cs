@@ -11,13 +11,14 @@ namespace Test5
     {
 
         protected string _kind  ;
-        private DateTime createTime;
-        public   DateTime PublishTime 
+        public  readonly DateTime _createTime;
+        public  readonly DateTime _publishTime;
+        public Content(DateTime createTime, DateTime publishTime)
         {
-
-            get { return createTime; }
-        
+            _createTime = createTime;
+            _publishTime = publishTime;
         }
+      
         private string Title { get; set; }
         private User Auther { get; set; }
         public void Getcategory() 

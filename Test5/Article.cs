@@ -40,7 +40,7 @@ namespace Test5
 
 
         HelpMoney hpm = new HelpMoney();
-
+        [HelpMoneyChanged(5)]
         public override void publish()
         {
             hpm.changes--;

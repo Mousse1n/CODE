@@ -10,6 +10,7 @@ namespace Test5
     public  class  ContentService
     {
         public int id { get; set; }
+        [HelpMoneyChanged(5)]
         public virtual void   publish()
         {
 

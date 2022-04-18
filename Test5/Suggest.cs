@@ -9,6 +9,7 @@ namespace Test5
     class Suggest :ContentService,IAgreeOrDisagree
     {
         Article Article = new Article();
+       [HelpMoneyChanged(2)]
         public override void publish()
         {
             base.publish();

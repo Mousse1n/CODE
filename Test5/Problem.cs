@@ -25,6 +25,7 @@ namespace Test5
         private int Reward;
         private User Author;
         HelpMoney hpm = new HelpMoney();
+        [HelpMoneyChanged(2)]
         public override void publish()
         {
             hpm.changes -= Reward;
