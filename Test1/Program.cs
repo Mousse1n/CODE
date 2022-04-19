@@ -2,9 +2,14 @@
 using static System.Console;
 namespace Test1
 {
-    class Program
+   public  class Program
     {
-        static void Main(string[] args)
+       
+        //public static int Max
+        
+        
+        
+        public  static void Main(string[] args)
         {
             setGrade(98);
             
@@ -298,7 +303,7 @@ namespace Test1
         /// </summary>
         /// <param name="ArraySum">数组</param>
         /// <returns>最大值</returns>
-        static int getMax(int[] ArraySum)
+        public static int getMax(int[] ArraySum)
         {
             int ForNumberMax = ArraySum[0];
             for (int i = 0; i < ArraySum.Length; i++)

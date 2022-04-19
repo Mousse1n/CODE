@@ -13,7 +13,7 @@ namespace HomeworkStatic
 //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
 //如果已弹出所有数据，提示“栈已空”
 
-    class MimicStack
+  public  class MimicStack
     {
         private int top = -1;//指向顶点元素
         private int maxSize;//数组最大存储空间
@@ -48,7 +48,7 @@ namespace HomeworkStatic
         /// 弹出栈顶数据
         /// </summary>
         /// <returns></returns>
-        public int Pop() 
+        public  int Pop() 
         {
             if (IsEmpty)
             {
