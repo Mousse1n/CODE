@@ -11,7 +11,7 @@ namespace TestProject1
     
    public class DLinkNodeTest
     {
-       private DLinkNode node1, node2, node3, node4;
+       private DLinkNode node1, node2, node3, node4,node5;
        // [Test]
        [SetUp]
         public void Setup() 
@@ -69,17 +69,18 @@ namespace TestProject1
         [Test]
         public void BeforeTest()
         {
-            ///[3]1 2
-            
-            node1.AddBefore(node3);
-            Assert.IsNull(node3.Prervious);
-            ///1 [3] 2 
-            node2.AddBefore(node3);
-            Assert.AreEqual(node1,node3.Prervious);
-            Assert.AreEqual(node2,node3.Next);
+            ///[5]1,2,3,4
+            node5 = new DLinkNode();
+            node1.AddBefore(node5);
             Assert.IsNull(node1.Prervious);
-            Assert.AreEqual(node3,node1.Next);
-            Assert.AreEqual(node3, node2.Prervious);
+            Assert.IsNull(node4.Next);
+            ///1 [5] 2 3 4 
+            node2.AddBefore(node5);
+            Assert.AreEqual(node1, node5.Prervious);
+            Assert.AreEqual(node2, node5);
+            Assert.IsNull(node1.Prervious);
+            Assert.AreEqual(node5, node1.Next);
+            Assert.AreEqual(node5, node2.Prervious);
             Assert.IsNull(node2.Next);
 
 
@@ -87,9 +88,30 @@ namespace TestProject1
         [Test]
         public void DeleteTest()
         {
-        
-        
-        
+            ///1,2,3,4
+            ///1 2,3,4
+            ///
+            node1.Delete();
+            Assert.IsNull(node2.Prervious);
+            ///2,3,4
+            ///2,4
+            ///
+            node3.Delete();
+            Assert.AreEqual(node2,node4.Prervious);
+            Assert.AreEqual(node4,node2.Next);
+            ///2,4
+            ///2
+            ///
+            node4.Delete();
+            Assert.IsNull(node2.Next);
+            Assert.IsNull(node2.Prervious);
+
+
+
+
+
+
+
         }
         [Test]
         public void swapTest()
