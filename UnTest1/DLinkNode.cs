@@ -85,8 +85,7 @@ namespace UnTest1
         {
             ///1,2,3,4
             ///2,3,4
-            //this.Next = this.Next.Next;
-            //this.Next.Next = this.Next.Next.Next;
+           
 
             ///2,3,4
             ///2,4
@@ -95,30 +94,30 @@ namespace UnTest1
             ///2
             ///
             //this.Next.Prervious = this.Prervious;
-            if (this.Prervious != null&&this.Next != null)
+            if (this.Prervious != null && this.Next != null)
             {
-
-                this.Next.Prervious = this.Prervious.Next;
-                this.Prervious = null;
-                
-                this.Next = null;
-                
-              
-                
-            }
-            else if(this.Next == null)
-            {
-                this.Next.Prervious = this.Prervious;
-            }
-            else if(this.Prervious == null)
-            {
-                //this.Next = null;
-                //this.Prervious = null;
                 this.Next.Prervious = null;
-                this.Next = null;    
+                this.Prervious.Next = null;
+                this.Prervious.Next = this.Next;
+                this.Next.Prervious = this.Prervious;
+
+
+            }
+            else if (this.Next == null)
+            {
+                this.Prervious.Next = null;
+                
+               
+            }
+            else if (this.Prervious == null)
+            {
+                
+                this.Next.Prervious = null;
+                
             }
 
-
+            this.Next = null;
+            this.Prervious = null;
         }
         public void Swap()
         {
