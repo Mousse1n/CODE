@@ -13,11 +13,11 @@ namespace Test5
 //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
 //如果已弹出所有数据，提示“栈已空”
 
-    class MimicStack
+    class MimicStack<T>
     {
         private int top = -1;//指向顶点元素
         private int maxSize;//数组最大存储空间
-        private object[] datas;//存储数据数组
+        private T[] datas;//存储数据数组
         private bool IsFull { get => top - 1 == maxSize - 1; }//是否装满
         public bool IsEmpty { get => top == maxSize - 1; }//是否为空
         /// <summary>
@@ -27,13 +27,13 @@ namespace Test5
         public MimicStack(int maxSize) 
         {
             this.maxSize = maxSize;
-            datas = new object[this.maxSize];
+            datas = new T[this.maxSize];
         }
         /// <summary>
         /// 判断是否满，并入栈；
         /// </summary>
         /// <param name="value">入栈元素</param>
-        public void Push(int value) 
+        public void Push(T value) 
         {
            
             if (IsFull)
@@ -48,26 +48,26 @@ namespace Test5
         /// 弹出栈顶数据
         /// </summary>
         /// <returns></returns>
-        public int Pop() 
+        public T Pop() 
         {
             if (IsEmpty)
             {
                 throw new Exception("栈空");
             }
-            return (int)datas[top--];
+            return datas[top--];
         }
        /// <summary>
        /// 查看但是不弹出
        /// </summary>
        /// <returns></returns>
-        public int peek() 
+        public T peek() 
         {
             if (IsEmpty)
             {
                 throw new Exception("栈空");
             }
             
-            return (int)datas[top]; 
+            return datas[top]; 
         
         }
         /// <summary>

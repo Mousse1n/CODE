@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestHomework
 {
-   public static class Max
+   public  class Max: IComparable
     {
     
       /// <summary>
@@ -27,6 +27,10 @@ namespace TestHomework
             return ForNumberMax;
 
         }
-    
+
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

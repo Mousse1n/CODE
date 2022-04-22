@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-    public  class Entity
+    public  class Entity<T>
     {
 
-        public readonly int Id ;
+        public readonly T Id ;
     
     }
 }

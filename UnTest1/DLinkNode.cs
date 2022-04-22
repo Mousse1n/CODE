@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace UnTest1
 {
-    public class DLinkNode
+    public class DLinkNode<T>  
     {
-        public DLinkNode Prervious { get; set; }
-        public DLinkNode Next { get; set; }
-        public void AddAfter(DLinkNode node)
+        public DLinkNode<T> Prervious { get; set; }
+        public DLinkNode<T> Next { get; set; }
+        public void AddAfter(DLinkNode<T> node)
         {
             //1 [2]
             this.Next = node;
@@ -52,7 +52,7 @@ namespace UnTest1
             //    node.Prervious = this;
             //    this.Next = node;
         }
-        public void AddBefore(DLinkNode node)
+        public void AddBefore(DLinkNode<T> node)
         {
             if (this.Prervious == null)
             {
