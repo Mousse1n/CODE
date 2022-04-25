@@ -103,7 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Test2\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\Test2\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
