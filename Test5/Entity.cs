@@ -8,7 +8,6 @@ namespace Test5
 {
     public  class Entity<T>
     {
-
         public readonly T Id ;
     
     }
