@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-   public  class HelpMoney :Entity
+   public  class HelpMoney 
     {
         private DateTime UserPayTime;
         private int available;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Test5
 {
     //不能被继承
-    sealed class User : Entity,ISendMessage,IChat
+    sealed class User : Entity<User>,ISendMessage,IChat
     {
         //定义一个User类（以下所有类都按“一个类文件一个类”的原则组织），包含字段：Name（用户名）、Password（密码）和 邀请人（InvitedBy），和方法：
 //        Register()：能输出当前用户的注册信息，比如：fg开始注册，密码：1234，邀请人：dk

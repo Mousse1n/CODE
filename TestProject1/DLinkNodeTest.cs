@@ -11,15 +11,15 @@ namespace TestProject1
     
    public class DLinkNodeTest
     {
-       private DLinkNode node1, node2, node3, node4,node5;
+       private DLinkNode<int> node1, node2, node3, node4,node5;
        // [Test]
        [SetUp]
         public void Setup() 
         {
-             node1 = new DLinkNode();
-             node2 = new DLinkNode();
-             node3 = new DLinkNode();
-             node4 = new DLinkNode();
+             node1 = new DLinkNode<int>();
+             node2 = new DLinkNode<int>();
+             node3 = new DLinkNode<int>();
+             node4 = new DLinkNode<int>();
             //node1.AddAfter(node2);
             //node2.AddAfter(node3);
             //node3.AddAfter(node4);
@@ -70,7 +70,7 @@ namespace TestProject1
         public void BeforeTest()
         {
             ///[5]1,2,3,4
-            node5 = new DLinkNode();
+            node5 = new DLinkNode<int>();
             node1.AddBefore(node5);
             Assert.IsNull(node1.Prervious);
             Assert.IsNull(node4.Next);

@@ -55,9 +55,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewGenericsTest", "..\NewGe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListTestApplication", "..\ListTestApplication\ListTestApplication.csproj", "{93075401-95BD-4CE6-972E-5CD014BC0004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeachTest", "..\ForeachTest\ForeachTest.csproj", "{7AC8B14D-8E21-4801-95D0-E97727A00F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeachTest", "..\ForeachTest\ForeachTest.csproj", "{7AC8B14D-8E21-4801-95D0-E97727A00F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsHomework4", "..\GenericsHomework4\GenericsHomework4.csproj", "{190B2673-2432-4007-B3C4-BE645D09F06F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericsHomework4", "..\GenericsHomework4\GenericsHomework4.csproj", "{190B2673-2432-4007-B3C4-BE645D09F06F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
