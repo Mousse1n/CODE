@@ -8,6 +8,9 @@ namespace Test5
 {
     public class Article : ContentService
     {
+        public Appraise Appraise { get; set; }
+        public IList<Comment> comments { get; set; }
+        public IList<Keyword> keywords { get; set; }
         private string _title;
         public void setTitle(string title)
         {

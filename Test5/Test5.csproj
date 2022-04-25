@@ -76,6 +76,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appraise.cs" />
+    <Compile Include="Comment.cs" />
     <Compile Include="HelpMoneyChanged.cs" />
     <Compile Include="IAgreeOrDisagree.cs" />
     <Compile Include="Article.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="HelpMoney.cs" />
     <Compile Include="IChat.cs" />
     <Compile Include="ISendMessage.cs" />
+    <Compile Include="Keyword.cs" />
     <Compile Include="MimicStack.cs" />
     <Compile Include="Problem.cs" />
     <Compile Include="Program.cs" />
