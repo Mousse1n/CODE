@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TestProject1
 {
-     public class homework1
+     public  class homework1
     {
         [Test]
         public void MaxTest() 
