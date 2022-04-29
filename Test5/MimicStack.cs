@@ -13,7 +13,7 @@ namespace Test5
 //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
 //如果已弹出所有数据，提示“栈已空”
 
-    class MimicStack<T>
+     public class MimicStack<T>
     {
         private int top = -1;//指向顶点元素
         private int maxSize;//数组最大存储空间
@@ -87,4 +87,16 @@ namespace Test5
         }
 
     }
+    public static class MimicStackMethod 
+    {
+
+        public static void Max(this MimicStack<int> mimicStack) 
+        {
+
+            Console.WriteLine("aa");
+        
+        
+        }
+    
+    } 
 }
