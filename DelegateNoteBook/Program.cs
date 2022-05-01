@@ -18,6 +18,19 @@ namespace DelegateNoteBook
         //    multpiple
 
         //}
+        static Func<int> caculate()
+        {
+            int a = 100, b = 50;
+            Console.WriteLine("this is a test");
+            return () => a + b;
+
+
+        }
+        static void Opt(int x, int y)
+        {
+            int result = x % y /*+ sum*/;
+            Console.WriteLine(result);
+        }
         static void Closure(int a, int b, Action<int, int> opt)
         {
             Console.WriteLine("I'm AI caculator,let me try:");
@@ -94,7 +107,7 @@ namespace DelegateNoteBook
 
             //};
 
-            int sum = 100;
+            //int sum = 100;
             //Closure(18, 5, (x, y) =>
             // {
 
@@ -104,9 +117,14 @@ namespace DelegateNoteBook
 
 
             // });
-            //Closure
 
+            //Closure(18, 5, (x, y) =>
+            //{
+            //    int result = x % y + sum;
+            //    Console.WriteLine(result);
+            //});
 
+            //result++
 
 
             //Action<int> square = (a) =>
@@ -128,7 +146,8 @@ namespace DelegateNoteBook
 
             //Action greet = () => Console.WriteLine("hello");
             //Func<int, int> square1 = a => a * a;
-
+           Func<int> func =  caculate();
+            func();
         }
     }
 }
