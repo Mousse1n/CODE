@@ -11,13 +11,15 @@ namespace DelegateNoteBook
     public delegate void Opt(int a, int name);
     public delegate void OptString(string a, string b);
     public delegate void Opt<T1, T2>(T1 a, T2 b);
+    //public delegate T MyFunc<T1, T2,T>(T1 t1, T2 t2);
+
     public delegate Action<int, int> Opt2<T1, T2>(T1 a, T2 name);
     public class Generic<T> where T : Person
     {
 
 
     }
-    public delegate TResult myFunc<in T1, in T2, out TResult>(T1 t1, T2 t2);
+    public delegate TResult myFunc<in T1, out TResult>(T1 t1);
 
     public class Person
     {
@@ -27,6 +29,11 @@ namespace DelegateNoteBook
     }
     public class Student : Person
     {
+
+    }
+    public class Teacher : Person
+    {
+        public double Salary { get; set; }
 
     }
     class Program
@@ -96,16 +103,45 @@ namespace DelegateNoteBook
         static void Main(string[] args)
         {
 
-            IList<Student> students = new List<Student>
-            {
-            new Student{age = 60 },
-            new Student{ age = 20},
-            new Student{ age = 18}
+            //Func<Student, Person> func =
+            //    s =>
+            //    {
 
+            //        return new Student();
+            //    };
+            //Func<Student, Person> func = GetTeacher;
+
+            //Func<Student, Person> func1 = null;
+            //Func<Person, Student> func2 = null;
+            //func1 = func2;
+            //// func2 = func1;
+            //IList<Student> students = new List<Student>
+            //    {
+            //    new Student{age = 60 },
+            //    new Student{ age = 20},
+            //    new Student{ age = 18}
+
+            //    };
+            ////students.Any((student) => student.age > 20);
+            ////students.Any(s => s.age > 20);
+            //students.myAny(s => s.age > 20);
+
+            myFunc<Teacher, Student> func1 = p =>
+            {
+                p.Salary = 20;
+                return new Student();
             };
-            //students.Any((student) => student.age > 20);
-            //students.Any(s => s.age > 20);
-            students.myAny(s => s.age>20);
+            myFunc<Person, Student> func2 = p =>
+           {
+               p.age = 20;
+               return new Student();
+           };
+
+
+
+            func1 = func2;
+            func1(new Teacher());
+            //func1(new Person());//不可以
         }
 
         static Student GetTeacher(Person student)
@@ -120,7 +156,7 @@ namespace DelegateNoteBook
     public static class MyExtension
     {
 
-       public  static bool myAny<T>(this IEnumerable<T> source, Func<T, bool> Preticate)
+        public static bool myAny<T>(this IEnumerable<T> source, Func<T, bool> Preticate)
         {
             foreach (T item in source)
             {
@@ -128,7 +164,7 @@ namespace DelegateNoteBook
                 {
                     return true;
                 }
-            }                 
+            }
             return false;
         }
 

@@ -59,7 +59,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeachTest", "..\ForeachTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericsHomework4", "..\GenericsHomework4\GenericsHomework4.csproj", "{190B2673-2432-4007-B3C4-BE645D09F06F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateNoteBook", "..\DelegateNoteBook\DelegateNoteBook.csproj", "{CA3CB06D-BB1A-4F74-8FC6-6F56E018A6C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateNoteBook", "..\DelegateNoteBook\DelegateNoteBook.csproj", "{CA3CB06D-BB1A-4F74-8FC6-6F56E018A6C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTest", "..\EventTest\EventTest.csproj", "{EBA9AF91-6499-473E-9950-B746287182F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +185,10 @@ Global
 		{CA3CB06D-BB1A-4F74-8FC6-6F56E018A6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA3CB06D-BB1A-4F74-8FC6-6F56E018A6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA3CB06D-BB1A-4F74-8FC6-6F56E018A6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA9AF91-6499-473E-9950-B746287182F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA9AF91-6499-473E-9950-B746287182F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA9AF91-6499-473E-9950-B746287182F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA9AF91-6499-473E-9950-B746287182F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
