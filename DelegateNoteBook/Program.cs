@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DelegateNoteBook
 {
@@ -10,6 +12,23 @@ namespace DelegateNoteBook
     public delegate void OptString(string a, string b);
     public delegate void Opt<T1, T2>(T1 a, T2 b);
     public delegate Action<int, int> Opt2<T1, T2>(T1 a, T2 name);
+    public class Generic<T> where T : Person
+    {
+
+
+    }
+    public delegate TResult myFunc<in T1, in T2, out TResult>(T1 t1, T2 t2);
+
+    public class Person
+    {
+        public int age { get; set; }
+
+
+    }
+    public class Student : Person
+    {
+
+    }
     class Program
     {
         //enum Operator
@@ -76,78 +95,43 @@ namespace DelegateNoteBook
 
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
-            //Opt opt = Add;
-            //opt(75, 63);
-            //Action<int, int> opt = Add;
-            //Action<int, int> mulitple = opt;
-            //Action<int, int> action = Multple(23,32);
-            //action(12,21);
-            //Func<int, int,Action<int,int>> action1 = Multple;
-            //Opt2<int, int> opt2 = Multple;
-            //AICaculate(8, 3, delegate (int a, int b)
-            // {
 
-            //     Console.WriteLine($"{a}%{b} ={a % b}");
+            IList<Student> students = new List<Student>
+            {
+            new Student{age = 60 },
+            new Student{ age = 20},
+            new Student{ age = 18}
 
-            // });
-
-            //Action<int, int> opt = Add;
-            //Action<int, int> opt = delegate (int a, int b)
-            //{
-
-            //    Console.WriteLine($"it is so easy,{a}+{b}={a + b}");
-
-            //};
-            //Action<int, int> opt = (a, b) =>
-            //{
-
-            //    Console.WriteLine($"it is so easy,{a}+{b}={a + b}");
-
-
-            //};
-
-            //int sum = 100;
-            //Closure(18, 5, (x, y) =>
-            // {
-
-            //     int result = x % y + sum;
-            //     Console.WriteLine(result);
-
-
-
-            // });
-
-            //Closure(18, 5, (x, y) =>
-            //{
-            //    int result = x % y + sum;
-            //    Console.WriteLine(result);
-            //});
-
-            //result++
-
-
-            //Action<int> square = (a) =>
-            //{
-
-            //    Console.WriteLine($"{a}*{a} ={a * a}");
-
-            //};
-            //Func<int, int> square1 = (a) =>
-            //    {
-            //        return a * a;
-            //        //Console.WriteLine($"{a}*{a} ={a * a}");
-
-            //    };
-
-            //Action<int> square = (a) => Console.WriteLine($"{a}*{a} ={a * a}");
-
-            //Func<int, int> square1 = (a) => a * a;
-
-            //Action greet = () => Console.WriteLine("hello");
-            //Func<int, int> square1 = a => a * a;
-           Func<int> func =  caculate();
-            func();
+            };
+            //students.Any((student) => student.age > 20);
+            //students.Any(s => s.age > 20);
+            students.myAny(s => s.age>20);
         }
+
+        static Student GetTeacher(Person student)
+        {
+
+            return new Student();
+
+        }
+
+
+    }
+    public static class MyExtension
+    {
+
+       public  static bool myAny<T>(this IEnumerable<T> source, Func<T, bool> Preticate)
+        {
+            foreach (T item in source)
+            {
+                if (Preticate(item))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
     }
 }
