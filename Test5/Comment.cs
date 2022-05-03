@@ -10,6 +10,6 @@ namespace Test5
     {
         public Article Article { get; set; }
         public Appraise Appraise { get; set; }
-
+        public string content { get; set; }
     }
 }

@@ -11,7 +11,8 @@ namespace Test5
         public Appraise Appraise { get; set; }
         public IList<Comment> comments { get; set; }
         public IList<Keyword> keywords { get; set; }
-        private string _title;
+        public string name { get; set; }
+        private string _title { get; set; }
         public void setTitle(string title)
         {
             if (string.IsNullOrEmpty(title))

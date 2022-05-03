@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Test5
 {
-     public class Keyword
+    public class Keyword
     {
-        IList<Article> Articles { get; set; }
-    
+        public IList<Article> Articles { get; set; }
+        public string KeyWordName { get; set; }
     }
 }

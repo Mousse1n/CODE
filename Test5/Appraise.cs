@@ -8,7 +8,7 @@ namespace Test5
 {
     public class Appraise
     {
-        private Appraise Agree { get; set; }
-        private Appraise DisAgree { get; set; }
+        public  int Agree { get; set; }
+        public  int DisAgree { get; set; }
     }
 }
