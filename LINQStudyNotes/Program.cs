@@ -65,6 +65,7 @@ namespace LINQStudyNotes
             foreach (IGrouping<Teacher, Major> item in result)
             {
 
+
                 Console.WriteLine(item.Key.Name);//老师名字
                 foreach (var mojer in item)
                 {
