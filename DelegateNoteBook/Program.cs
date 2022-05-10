@@ -153,6 +153,20 @@ namespace DelegateNoteBook
 
 
     }
+    public static class My
+    {
+        public static void Mytest(this Student stu, int a, int b)
+        {
+
+            Console.WriteLine($"{a}+{b} = {a + b}");
+
+        }
+
+
+
+    }
+
+
     public static class MyExtension
     {
 

@@ -72,10 +72,12 @@ namespace Test5
             ///每个文章和评论都有一个评价
             ///一篇文章可以有多个关键字，
             ///一个关键字可以对应多篇文章
-
-            Article gzc = new Article { name = "杨童舒" };
-            Article yts = new Article { name = "dashbi" };
-
+            User dfg = new User { Name = "飞哥" };
+            User xiaoyu = new User { Name = "小鱼" };
+            Article gzc = new Article { name = "杨童舒", User = dfg, PushTime = DateTime.Now };
+            Article yts = new Article { name = "dashbi", User = xiaoyu, PushTime = DateTime.Now };
+            Article CsharpLearn = new Article { name = "C#学习技巧", User = xiaoyu, PushTime = DateTime.Now };
+            Article daoNETLearn = new Article { name = ".net学习技巧", User = dfg,PushTime = DateTime.Now };
             Comment GoodComment = new Comment { content = "真棒" };
             Comment BadComment = new Comment { content = "差劲" };
 

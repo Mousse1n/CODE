@@ -11,6 +11,8 @@ namespace Test5
         public Appraise Appraise { get; set; }
         public IList<Comment> comments { get; set; }
         public IList<Keyword> keywords { get; set; }
+        public DateTime PushTime { get; set; }
+        public User User { get; set; }
         public string name { get; set; }
         private string _title { get; set; }
         public void setTitle(string title)
@@ -30,7 +32,7 @@ namespace Test5
             }
             else
             {
-                _title = title;  
+                _title = title;
             }
 
         }
