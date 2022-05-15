@@ -77,7 +77,8 @@ namespace Test5
             Article gzc = new Article { name = "杨童舒", User = dfg, PushTime = DateTime.Now };
             Article yts = new Article { name = "dashbi", User = xiaoyu, PushTime = DateTime.Now };
             Article CsharpLearn = new Article { name = "C#学习技巧", User = xiaoyu, PushTime = DateTime.Now };
-            Article daoNETLearn = new Article { name = ".net学习技巧", User = dfg,PushTime = DateTime.Now };
+            Article daoNETLearn = new Article { name = ".net学习技巧", User = dfg, PushTime = DateTime.Now };
+            Article pinglunxue = new Article { name = "评论学", User = dfg, PushTime = DateTime.Now };
             Comment GoodComment = new Comment { content = "真棒" };
             Comment BadComment = new Comment { content = "差劲" };
 

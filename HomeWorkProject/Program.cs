@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace HomeWorkProject
 {
@@ -26,10 +27,10 @@ namespace HomeWorkProject
         public static void GetWater()
         {
             ProvideWater pw = ProvideWaterMethod;
-            Console.WriteLine(pw(new Person())); 
-          
+            Console.WriteLine(pw(new Person()));
+
         }
-        public static  void Rundelegate()
+        public static void Rundelegate()
         {
             //方法
             ProvideWater Pw = ProvideWaterMethod;
@@ -59,9 +60,27 @@ namespace HomeWorkProject
 
         static void Main(string[] args)
         {
-            GetWater();
-           // Rundelegate();
+            //GetWater();
+            // Rundelegate();
             //Console.WriteLine("Hello World!");
+            //Problem problem = new Problem();
+            //Type typeInfo = problem.GetType();
+            //MethodInfo methodInfo  = typeInfo.GetMethod("publish");
+            //Console.WriteLine(methodInfo.Attributes); 
+            Article zbl = new Article() { Title = "资本论" };
+            Article zgts = new Article() { Title = "中国通史" };
+            Article swdnr = new Article() { Title = "上尉的女儿" };
+
+            Comment GoodComment = new Comment() { Title = "GOOD" };
+            Comment NiceComment = new Comment() { Title = "nice" };
+            Comment BadComment = new Comment() { Title = "不好" };
+
+            Appraise zblAppraise = new Appraise() { Agree = 1 };
+            Appraise zgtsAppraise = new Appraise() { Agree = 1 };
+            Appraise swdnrAppraise = new Appraise() { Agree = 1 };
+            Appraise GoodCommentAppraise = new Appraise() { Agree = 1 };
+            Appraise NiceCommentAppraise = new Appraise() { Agree = 1 };
+            Appraise BadCommentAppraise = new Appraise() { DisAgree = 1 };
         }
     }
 }
