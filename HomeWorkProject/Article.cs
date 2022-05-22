@@ -10,10 +10,10 @@ namespace HomeWorkProject
     public class Article : Content
     {
 
-        public string Keywords { get; set; }
-        public Appraise appraise { get; set; }
+
+        public Appraise Appraise { get; set; }
         public IList<Comment> comments { get; set; }
-        public IList<Appraise> appraises { get; set; }
+        public IList<Keyword> KeyWords { get; set; }
         public Article(Article article)
         {
             if (article.Title == null)

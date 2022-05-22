@@ -8,8 +8,8 @@ namespace HomeWorkProject
 {
     public class Comment : Content
     {
-        public Article Article { get; set; }
-        public Appraise appraise { get; set; }
+        public IList<Article> Articles { get; set; }
+        public Appraise Appraise { get; set; }
 
 
 

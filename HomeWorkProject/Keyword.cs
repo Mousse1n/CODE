@@ -8,6 +8,7 @@ namespace HomeWorkProject
 {
     public class Keyword
     {
+        public string Name { get; set; }
 
         public IList<Article> articles { get; set; }
 

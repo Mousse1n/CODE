@@ -63,7 +63,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateNoteBook", "..\Dele
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventTest", "..\EventTest\EventTest.csproj", "{EBA9AF91-6499-473E-9950-B746287182F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQStudyNotes", "..\LINQStudyNotes\LINQStudyNotes.csproj", "{66EF8D21-7FFC-49D4-9E76-0EA30C28D776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQStudyNotes", "..\LINQStudyNotes\LINQStudyNotes.csproj", "{66EF8D21-7FFC-49D4-9E76-0EA30C28D776}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbnormalLearningTest", "..\AbnormalLearningTest\AbnormalLearningTest.csproj", "{26874586-EDA7-4941-A205-969E02082557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreading", "..\Multithreading\Multithreading.csproj", "{958AA1A2-9B1A-49CC-ACE3-5209918B4321}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +199,14 @@ Global
 		{66EF8D21-7FFC-49D4-9E76-0EA30C28D776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66EF8D21-7FFC-49D4-9E76-0EA30C28D776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66EF8D21-7FFC-49D4-9E76-0EA30C28D776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26874586-EDA7-4941-A205-969E02082557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26874586-EDA7-4941-A205-969E02082557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26874586-EDA7-4941-A205-969E02082557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26874586-EDA7-4941-A205-969E02082557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958AA1A2-9B1A-49CC-ACE3-5209918B4321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958AA1A2-9B1A-49CC-ACE3-5209918B4321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958AA1A2-9B1A-49CC-ACE3-5209918B4321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958AA1A2-9B1A-49CC-ACE3-5209918B4321}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

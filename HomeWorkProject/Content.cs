@@ -13,8 +13,8 @@ namespace HomeWorkProject
         public User Appraiser { get; set; }
         public string Title { get; set; }
         protected string[] kind = { "problem", "article", "suggest" };
-        private DateTime PublishTime { get; }
-        private DateTime CreateTime { get; }
+        public DateTime PublishTime { get; set; }
+        public DateTime CreateTime { get; set; }
         public override void Release()
         {
             //base.Release();
