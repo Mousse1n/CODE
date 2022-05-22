@@ -9,10 +9,10 @@ namespace HomeWorkProject
     public class Problem : Content
     {
         private string[] _ProblemKeyWords = { "代码", "学习", "注册问题" };
-        public string Title;
+
         public string Body;
         public int Reward;
-        public User Author { get; set; }
+
         /// <summary>
         /// 构造函数获取值保证一定赋值
         /// </summary>
