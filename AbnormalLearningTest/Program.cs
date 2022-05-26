@@ -14,6 +14,7 @@ namespace AbnormalLearningTest
             Console.WriteLine("打开数据库");
             try
             {
+                
                 Console.WriteLine("执行操作。。。");
             }
             catch (Exception)
