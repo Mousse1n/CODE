@@ -131,3 +131,27 @@ where Used>10AND Used<50
 update KeyWord set Used =1 where Used <= 0 or USed >100 or Used is NUll
 --删除所有使用次数为奇数的Keyword
 delete KeyWord where not Used%2 =0
+--在User表上的基础上：
+
+--添加Id列，让Id成为主键
+--添加约束，让UserName不能重复
+use [17bang]
+go
+Delete [dbo].[User] where UserName = N's1';
+ALTER TABLE [DBO].[User]
+ADD CONSTRAINT UQ_UN UNIQUE(UserName); 
+--在Problem表的基础上：
+
+--为NeedRemoteHelp添加NOT NULL约束，再删除NeedRemoteHelp上NOT NULL的约束
+--添加自定义约束，让Reward不能小于10
+use [17bang]
+go
+ALTER TABLE [dbo].[Problem]
+ALTER COlUMN NeedRemoteHelp bit NOT NULL
+ALTER TABLE [dbo].[Problem]
+ALTER COlUMN NeedRemoteHelp bit NULL
+--添加自定义约束，让Reward不能小于10
+ALTER TABLE [DBO].[Problem]
+ADD CONSTRAINT CK_Problem_Reward CHECK(Reward>10); 
+
+--将User表中Id列修改为可存储GUID的类型，并存入若干条包含GUID值的数据
