@@ -170,3 +170,12 @@ insert [dbo].[NewIDUser] VALUES(NEWID(),N'haha3',N'xixi')
 insert [dbo].[NewIDUser] VALUES(NEWID(),N'haha4',N'xixi')
 
 select * from NewIDUser
+
+--在Problem中插入不同作者（Author）不同悬赏（Reward）的若干条数据，以便能完成以下操作：
+ALTER Table [dbo].[problem]
+ADD Author Nvarchar(20) null;
+--查找出Author为“飞哥”的、Reward最多的3条求助
+select TOP 3 * from Problem
+where Author =N'飞哥'
+Order by Reward DESC  
+--所有求助，先按作者“分组”，然后在“分组”中按悬赏从大到小排序
