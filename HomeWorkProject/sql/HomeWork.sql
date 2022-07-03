@@ -155,3 +155,18 @@ ALTER TABLE [DBO].[Problem]
 ADD CONSTRAINT CK_Problem_Reward CHECK(Reward>10); 
 
 --将User表中Id列修改为可存储GUID的类型，并存入若干条包含GUID值的数据
+--修改User表中Id列
+
+Create Table [dbo].[NewIDUser]
+(
+[Id] varchar(50) not null primary key ,
+[UserName]  NVARCHAR(10) NULL, 
+[PassWord]  Nvarchar(20) Null
+);
+
+insert [dbo].[NewIDUser] VALUES(NEWID(),N'haha1',N'xixi')
+insert [dbo].[NewIDUser] VALUES(NEWID(),N'haha2',N'xixi')
+insert [dbo].[NewIDUser] VALUES(NEWID(),N'haha3',N'xixi')
+insert [dbo].[NewIDUser] VALUES(NEWID(),N'haha4',N'xixi')
+
+select * from NewIDUser
