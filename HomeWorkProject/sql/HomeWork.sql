@@ -190,5 +190,5 @@ Group by Author
 --找出平均悬赏值少于10的作者并按平均值从小到大排序
 select Author,  Avg(Reward) AS AvgReward from problem
 Group by Author
-Having Avg(Reward)>10
+Having Avg(Reward)<10
 order by AvgReward ASC
