@@ -179,3 +179,16 @@ select TOP 3 * from Problem
 where Author =N'飞哥'
 Order by Reward DESC  
 --所有求助，先按作者“分组”，然后在“分组”中按悬赏从大到小排序
+select Author,Reward from dbo.Problem
+Group by Author ,Reward
+Order by Reward DESC
+select * from Problem
+--查找并统计出每个作者的：求助数量、悬赏总金额和平均值
+select Author,count(*)As ProblemNumber,SUM(Reward) AS RewardSum,AVG(Reward) AS RewardAvg
+from dbo.problem
+Group by Author
+--找出平均悬赏值少于10的作者并按平均值从小到大排序
+select Author,  Avg(Reward) AS AvgReward from problem
+Group by Author
+Having Avg(Reward)>10
+order by AvgReward ASC
