@@ -193,3 +193,12 @@ Group by Author
 Having Avg(Reward)<10
 order by AvgReward ASC
 --以Problem中的数据为基础，使用SELECT INTO，新建一个Author和Reward都没有NULL值的新表：NewProblem （把原Problem里Author或Reward为NULL值的数据删掉）
+Select Id,[Title],[Content],[NeedRemoteHelp],[Reward],[Createtime],[PublishTime],[Author]
+Into NewProblem
+from Problem
+WHERE [Author] <> null AND [Reward] <> NULL 
+
+
+INSERT NewProblem Select [Title],[Content],[NeedRemoteHelp],[Reward],[Createtime],[PublishTime],[Author]
+from Problem 
+WHERE [Author] <> null AND [Reward] <> NULL 
