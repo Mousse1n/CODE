@@ -198,7 +198,7 @@ Into NewProblem
 from Problem
 WHERE [Author] <> null AND [Reward] <> NULL 
 
-
+--使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
 INSERT NewProblem Select [Title],[Content],[NeedRemoteHelp],[Reward],[Createtime],[PublishTime],[Author]
 from Problem 
-WHERE [Author] <> null AND [Reward] <> NULL 
+WHERE [Author] <> null OR [Reward] <> NULL 
