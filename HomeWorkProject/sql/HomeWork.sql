@@ -202,3 +202,8 @@ WHERE [Author] <> null AND [Reward] <> NULL
 INSERT NewProblem Select [Title],[Content],[NeedRemoteHelp],[Reward],[Createtime],[PublishTime],[Author]
 from Problem 
 WHERE [Author] <> null OR [Reward] <> NULL 
+
+--为求助添加一个发布时间（TPublishTime）
+--1.删除每个作者悬赏最低的求助
+
+--2.找到从未成为邀请人的用户
