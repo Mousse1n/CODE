@@ -45,3 +45,58 @@ begin tran;
 --UPDATE Student set Age += 5;
 --update Student Set [Name] = 
 Rollback
+Drop Table IF Exists Teacher
+create Table Teacher
+(
+Id int,
+[Name] Nvarchar (25),
+Age Int,
+Gender BIT
+
+
+)
+ALTER Table Teacher 
+--ADD Constraint UQ_Teacher_Name UNIQUE([Name])
+Drop Constraint UQ_Teacher_Name
+Select [name],[type],is_unique,is_primary_key,is_unique_constraint
+FROM sys.indexes
+where object_id = OBJECT_ID('Teacher')
+
+
+
+
+
+create unique Clustered Index IX_Teacher_Id on Teacher(Id)
+Create UNique Index IX_Teacher_Name ON Teacher([Name])
+Create Index IX_Teacher_Age ON Teacher(Age)
+Create unique Index IX_Teacher_Name_Age on Teacher([Name],Age)
+insert Teacher(Id,[Name]) Values(1,N'飞哥')
+Drop INdex Teacher.IX_Teacher_Name_Age
+
+ALTER Table Teacher
+ALTER Column Age int NOT NULL
+
+--分组
+select age from student
+where age>19
+group By Age
+
+--Having Age>19
+
+select age from student
+group By Age
+Having Age>19
+
+
+
+Select * from Teacher
+
+
+
+
+INsert Teacher VALUes(1,N'飞哥',40,1) 
+INsert Teacher VALUes(2,N'飞哥',40,1) 
+INsert Teacher VALUes(3,N'飞哥',40,1) 
+INsert Teacher VALUes(4,N'飞哥',40,1) 
+INsert Teacher VALUes(5,N'飞哥',40,1) 
+Select * From Teacher Where[name] = N'飞哥'
