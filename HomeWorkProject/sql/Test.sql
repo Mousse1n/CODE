@@ -48,13 +48,14 @@ Rollback
 Drop Table IF Exists Teacher
 create Table Teacher
 (
-Id int,
+Id int primary key identity(1,1),
 [Name] Nvarchar (25),
 Age Int,
 Gender BIT
 
 
 )
+DROP TABLE Teacher
 ALTER Table Teacher 
 --ADD Constraint UQ_Teacher_Name UNIQUE([Name])
 Drop Constraint UQ_Teacher_Name
@@ -72,7 +73,7 @@ Create Index IX_Teacher_Age ON Teacher(Age)
 Create unique Index IX_Teacher_Name_Age on Teacher([Name],Age)
 insert Teacher(Id,[Name]) Values(1,N'飞哥')
 Drop INdex Teacher.IX_Teacher_Name_Age
-
+Create  Index IX_Teacher_Name ON Teacher([Name])
 ALTER Table Teacher
 ALTER Column Age int NOT NULL
 
@@ -94,9 +95,17 @@ Select * from Teacher
 
 
 
-INsert Teacher VALUes(1,N'飞哥',40,1) 
-INsert Teacher VALUes(2,N'飞哥',40,1) 
-INsert Teacher VALUes(3,N'飞哥',40,1) 
-INsert Teacher VALUes(4,N'飞哥',40,1) 
-INsert Teacher VALUes(5,N'飞哥',40,1) 
-Select * From Teacher Where[name] = N'飞哥'
+INsert Teacher VALUes(N'飞哥',40,1) 
+INsert Teacher VALUes(N'飞哥',40,1) 
+INsert Teacher VALUes(N'飞哥',40,1) 
+INsert Teacher VALUes(N'飞哥',40,1) 
+INsert Teacher VALUes(N'飞哥',40,1) 
+ 
+Select * From Teacher
+--Where[name] = N'飞哥'
+where Age >100
+
+insert Teacher 
+Select [Name],Age, Gender From Teacher
+
+select * from Teacher where 150 =Id+23
