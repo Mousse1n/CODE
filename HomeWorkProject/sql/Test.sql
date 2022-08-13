@@ -21,15 +21,16 @@ create table Student
  [Id] int not null primary key identity(1,1),
  [Name] nvarchar(5) null,
  [Age] int null,
+ [Score] int null
 );
-insert dbo.Student(Name,Age) values(N'可可',19);
-insert dbo.Student(Name,Age) values(N'爱爱',21);
-insert dbo.Student(Name,Age) values(N'aa',19);
-insert dbo.Student(Name,Age) values(N'bb',28);
-insert dbo.Student(Name,Age) values(N'cc',14);
-insert dbo.Student(Name,Age) values(N'dd',26);
-insert dbo.Student(Name,Age) values(N'ff',15);
-insert dbo.Student(Name,Age) values(N'gg',21);
+insert dbo.Student([Name],Age,SCore) values(N'可可',19,91);
+insert dbo.Student([Name],Age,SCore) values(N'爱爱',21,82);
+insert dbo.Student([Name],Age,SCore) values(N'aa',19,70);
+insert dbo.Student([Name],Age,SCore) values(N'bb',28,69);
+insert dbo.Student([Name],Age,SCore) values(N'cc',14,81);
+insert dbo.Student([Name],Age,SCore) values(N'dd',26,19);
+insert dbo.Student([Name],Age,SCore) values(N'ff',15.23);
+insert dbo.Student([Name],Age,SCore) values(N'gg',21,72);
 Alter TABLE Student ADD [Description] Nvarchar(100) Null;
 Alter Table Student Alter Column[Name] Nvarchar(5) null;
 update Student set [Description] =N'小可爱' where Id between 1 AND 2;
@@ -109,3 +110,46 @@ insert Teacher
 Select [Name],Age, Gender From Teacher
 
 select * from Teacher where 150 =Id+23
+ALTER TABLE Student 
+ADD SCore int
+
+ALTER TABLE Student 
+ADD Grade NVARCHAR(25)
+
+insert Student(Id,[Name],Age,SCore) VALUES(1,N'可可',19,91)
+
+ALTER TABLE Student 
+ADD Grade NVARCHAR(25)
+
+UPDATE Student 
+SET Grade = CASE
+-- CASE 的启动
+WHEN SCORE >= 80 THEN 'EXCELLENT'
+WHEN SCORE >= 68 THEN 'Pass'
+ELSE 'Failed'
+END
+select * from Student
+
+Create TABlE ChangeTableSLS
+(
+	Id int primary key identity(1,1),
+	[Name] Nvarchar(25),
+	[Subject] Nvarchar(25),
+	[Score] int
+)
+
+insert ChangeTableSLS Values (N'飞哥',N'SQL',98)
+insert ChangeTableSLS Values (N'飞哥',N'C#',89)
+insert ChangeTableSLS Values(N'飞哥',N'JavaScript',76)
+insert ChangeTableSLS Values(N'路伟',N'C#',87)
+insert ChangeTableSLS Values(N'路伟',N'SQL',95)
+insert ChangeTableSLS Values(N'路伟',N'JavaScript',88)
+
+SELECT[Name],
+MAX(CASE [Subject] WHEN N'C#' THEN Score ELSE 0 END)AS N'C#',
+MAX(CASE [Subject] WHEN N'SQL' THEN Score ELSE 0 END)AS N'SQL',
+MAX(CASE [Subject] WHEN N'Javascript' THEN Score ELSE 0 END)AS N'JavaScript'
+From ChangeTableSLS
+GROUP By[Name]
+
+select * from ChangeTableSLS
